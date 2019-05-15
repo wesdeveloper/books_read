@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import NavBar from "../NavBar";
 import "./books.css";
 
 const Books = () => {
@@ -24,8 +25,8 @@ const Books = () => {
   return (
     <div className="container wrapper">
       <div className="row col s4 offset-s3">
+        <NavBar />
         <ul className="collection with-header">
-          <h5 className="center-align">Lista de livros</h5>
           {books.map(({ id, text, done }) => (
             <li className="collection-item" key={id}>
               <label>
